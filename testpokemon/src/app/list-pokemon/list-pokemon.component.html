@@ -1,1 +1,58 @@
-<p>list-pokemon works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col s12 m5">
+   <!--    <div class="card" [style.background-color]= "pokemons[0].background_color" >
+        <div class="row">
+          <div class="col s5 m5" style="padding-left: 6%;">
+            <span>{{ pokemons[0].name }}</span>
+          </div>
+          <div class="col s6 m6 right-align">
+            <p>{{ pokemons[0].abilities[0].icon }} {{  pokemons[0].level }} </p>
+          </div>
+        </div>
+        <div class="card-image img">
+          <img src="{{ pokemons[0].image }}" />
+        </div>
+        <div class="card-content">
+          <div class="row">
+            <div class="col s4 m4">{{ pokemons[0].abilities[0].icon }}</div>
+            <p class="col s4 m4">{{ pokemons[0].abilities[0].name }}</p>
+            <div class="col s4 m4">{{ pokemons[0].abilities[0].power }}</div>
+          </div>
+          <p style="font-size: xx-small;"> {{ pokemons[0].abilities[0].description }} </p>
+        </div>
+
+      </div> -->
+
+    <div class="mycard" [style.background-color]= "pokemons[0].background_color">
+      <div class="mycard-header">
+        <span>{{ pokemons[0].name }}</span>
+        <p>{{ pokemons[0].abilities[0].icon }} {{  pokemons[0].level }} </p>
+      </div>
+      <div class="myimage">
+        <img src="{{ pokemons[0].image }}" />
+      </div>
+      <div class="abilities">
+        <div class="row title">
+          <p class="col s4 m4">{{ pokemons[0].abilities[0].icon }}</p>
+            <p class="col s4 m4">{{ pokemons[0].abilities[0].name }}</p>
+            <p class="col s4 m4 right-align">{{ pokemons[0].abilities[0].power }}</p>
+            <p class="col s12 m12" style="font-size: xx-small;"> {{ pokemons[0].abilities[0].description }} </p>
+          </div>
+        <div class="description">
+        </div>
+      </div>
+    </div>
+
+    <div class="btn col s12 m12" (click)="lancer()">
+      <div >Lancer</div>
+    </div>
+    <button style="background-color: orangered;"
+    (click)="stop()"
+    [disabled]="disabled"
+    class="btn col s12 m12">
+      <div >Stop({{ stopText }})</div>
+    </button>
+    </div>
+  </div>
+</div>

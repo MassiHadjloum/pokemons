@@ -1,5 +1,6 @@
 import { PokemonServiceService } from './../pokemon-service.service';
 import { Component, OnInit } from '@angular/core';
+import { Pokemon } from '../pokemon';
 
 @Component({
   selector: 'app-list-pokemon',
@@ -8,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPokemonComponent implements OnInit {
   pokemons: any;
+  stopText: number = 15;
+  disabled: boolean = true;
+  private interval: any;
+
 
   constructor(private service: PokemonServiceService) { }
 
@@ -21,6 +26,26 @@ export class ListPokemonComponent implements OnInit {
       this.pokemons = Object.values(poke)[0];
       console.log("pokemons ", this.pokemons);
     })
+  }
+
+  lancer() {
+    console.log(this.pokemons.length);
+    this.disabled = false;
+    let count = 0;
+    this.interval = setInterval(() => {
+      const idx = Math.floor(Math.random() * this.pokemons.length);
+      count++;
+      this.stopText --;
+      console.log(idx);
+
+      if(count === 15) {
+        clearInterval(this.interval);
+      }
+    }, 1000);
+  }
+
+  stop() {
+    clearInterval(this.interval);
   }
 
  /*  private fetchArticles() {

@@ -1,0 +1,43 @@
+.img {
+  border: 1px solid black;
+  margin: 5px;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+.mycard {
+  border: solid 1px yellow;
+  border-radius: 5px;
+  padding: 4%;
+  margin: 2%;
+}
+
+.mycard-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.myimage {
+  height: 200px;
+  border: 1px solid black;
+}
+
+.myimage img {
+  width: 100%;
+  height: inherit;
+}
+
+.btn {
+  border: 1px solid black;
+  height: 60px;
+  padding: 4%;
+  margin: 2%;
+  background-color: yellow;
+  color: black;
+  font-family:sans-serif;
+  font-size: large;
+  border-radius: 10px;
+  box-shadow: 1px 0px 15px 2px black;
+}
