@@ -1,0 +1,30 @@
+<div class="mycard"
+  (click)="getId()"
+  [style.background-color]= "show === true ? pokemon.background_color : 'white'">
+  <div *ngIf="show">
+    <div class="mycard-header">
+      <span>{{ pokemon.name }}</span>
+      <p>{{ pokemon.abilities[0].icon }} {{  pokemon.level }} </p>
+    </div>
+    <div class="myimage">
+      <div class="img">
+        <img src="{{ pokemon.image }}" />
+      </div>
+    </div>
+    <div class="ablilities">
+      <div class="details" *ngFor="let abilitie of pokemon.abilities">
+        <div class="title">
+          <p >{{ abilitie.icon }}</p>
+            <p  style="font-size: x-small;">{{ abilitie.name }}</p>
+            <p >{{ abilitie.power }}</p>
+          </div>
+          <div class="description">
+            <p class="col s12 m12" style="font-size: 50% ;"> {{abilitie.description }} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="empty" *ngIf="!show">
+
+  </div>
+</div>

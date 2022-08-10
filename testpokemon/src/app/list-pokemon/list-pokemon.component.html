@@ -1,58 +1,55 @@
-<div class="container">
-  <div class="row">
-    <div class="col s12 m5">
-   <!--    <div class="card" [style.background-color]= "pokemons[0].background_color" >
-        <div class="row">
-          <div class="col s5 m5" style="padding-left: 6%;">
-            <span>{{ pokemons[0].name }}</span>
-          </div>
-          <div class="col s6 m6 right-align">
-            <p>{{ pokemons[0].abilities[0].icon }} {{  pokemons[0].level }} </p>
-          </div>
-        </div>
-        <div class="card-image img">
-          <img src="{{ pokemons[0].image }}" />
-        </div>
-        <div class="card-content">
-          <div class="row">
-            <div class="col s4 m4">{{ pokemons[0].abilities[0].icon }}</div>
-            <p class="col s4 m4">{{ pokemons[0].abilities[0].name }}</p>
-            <div class="col s4 m4">{{ pokemons[0].abilities[0].power }}</div>
-          </div>
-          <p style="font-size: xx-small;"> {{ pokemons[0].abilities[0].description }} </p>
-        </div>
+<img class="container" src="../../assets/fond-page.png" style="position: absolute; z-index:-1;" alt="">
+<div class="myrow">
+  <!-- <div class="row margin">
+    <div class="col s4 m3" *ngFor="let idx of indexes">
+      <p class="index"> {{ idx+1 }}</p>
+      <div class="small-card">
+        <app-cardpokemon [show]="pokemons[idx].id === foundId" [pokemon]="pokemons[idx]"></app-cardpokemon>
+      </div>
 
-      </div> -->
-
-    <div class="mycard" [style.background-color]= "pokemons[0].background_color">
-      <div class="mycard-header">
-        <span>{{ pokemons[0].name }}</span>
-        <p>{{ pokemons[0].abilities[0].icon }} {{  pokemons[0].level }} </p>
-      </div>
-      <div class="myimage">
-        <img src="{{ pokemons[0].image }}" />
-      </div>
-      <div class="abilities">
-        <div class="row title">
-          <p class="col s4 m4">{{ pokemons[0].abilities[0].icon }}</p>
-            <p class="col s4 m4">{{ pokemons[0].abilities[0].name }}</p>
-            <p class="col s4 m4 right-align">{{ pokemons[0].abilities[0].power }}</p>
-            <p class="col s12 m12" style="font-size: xx-small;"> {{ pokemons[0].abilities[0].description }} </p>
-          </div>
-        <div class="description">
-        </div>
-      </div>
     </div>
+  </div> -->
 
-    <div class="btn col s12 m12" (click)="lancer()">
-      <div >Lancer</div>
-    </div>
-    <button style="background-color: orangered;"
-    (click)="stop()"
-    [disabled]="disabled"
-    class="btn col s12 m12">
-      <div >Stop({{ stopText }})</div>
-    </button>
+
+  <div class="col s4 m3 l3 margin" id="c2">
+    <div class="single" *ngFor="let idx of indexes">
+      <p class="index"> {{ idx+1 }}</p>
+      <div class="small-card">
+        <app-cardpokemon [show]="pokemons[idx].id === foundId" [pokemon]="pokemons[idx]"></app-cardpokemon>
+      </div>
+
     </div>
   </div>
+
+
+  <div class="col s12 m4 center" id="c1">
+    <div class="col header">
+      <img src="../../assets/logo.png" alt="pokemon">
+    </div>
+    <div class="mcard">
+      <app-cardpokemon (tapCard)="tapCard($event)" [pokemon]=pokemon></app-cardpokemon>
+    </div>
+
+    <div class="btns row">
+      <button class="btn col s12 m12" [disabled]="!disabled" (click)="lancer()">
+        <div>Lancer</div>
+      </button>
+      <button style="background-color: orangered;" (click)="stop()" [disabled]="disabled" class="btn col s12 m12">
+        <div>Stop({{ stopText }} sec)</div>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="col s4 m3 l3 margin" id="c3">
+    <div class="single" *ngFor="let idx of indexes">
+      <p class="index">{{ idx+4 }}</p>
+      <div class=" small-card">
+        <app-cardpokemon [show]="pokemons[idx+3].id === foundId" [pokemon]="pokemons[idx+3]"></app-cardpokemon>
+      </div>
+    </div>
+  </div>
+
+
+
 </div>

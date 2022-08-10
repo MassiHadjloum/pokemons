@@ -1,7 +1,7 @@
 export class Pokemon {
   id: number;
   name: string;
-  lavel: number;
+  level: number;
   image: string;
   abilities: Abilities[];
   background_color: string;

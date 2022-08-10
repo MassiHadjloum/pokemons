@@ -1,3 +1,7 @@
+.container {
+  height: 100%;
+}
+
 .img {
   border: 1px solid black;
   margin: 5px;
@@ -5,29 +9,16 @@
   margin-right: 6%;
 }
 
-.mycard {
-  border: solid 1px yellow;
-  border-radius: 5px;
-  padding: 4%;
-  margin: 2%;
+.image {
+  background-image: url('../../assets/fond-page.png');
+  background-repeat: no-repeat;
 }
 
-.mycard-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+
+.margin {
+  width: 23%;
 }
 
-.myimage {
-  height: 200px;
-  border: 1px solid black;
-}
-
-.myimage img {
-  width: 100%;
-  height: inherit;
-}
 
 .btn {
   border: 1px solid black;
@@ -36,8 +27,164 @@
   margin: 2%;
   background-color: yellow;
   color: black;
-  font-family:sans-serif;
+  font-family: sans-serif;
   font-size: large;
   border-radius: 10px;
   box-shadow: 1px 0px 15px 2px black;
+}
+
+.col .row {
+  margin: 0 auto;
+}
+
+.small-card {
+  width: 79%;
+  height: 290px;
+  margin: 5%;
+  margin-bottom: 7%;
+  border: 8px solid rgba(255, 255, 255, .5);
+  border-collapse: separate;
+  padding: 10%;
+  overflow: hidden;
+}
+
+.mcard {
+  margin-top: 10%;
+  width: 90%;
+  height: 500px;
+}
+
+.header {
+  margin-top: 20%;
+  margin-bottom: 4%;
+  padding: 1%;
+}
+
+.btns {
+  width: 100%;
+  padding-top: 5%;
+  margin-top: 20%;
+}
+
+.btns .btn {
+  margin-top: 5%;
+}
+
+
+.center {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 9%;
+}
+
+.index {
+  color: rgba(255, 255, 255, .7);
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0%;
+  padding-right: 5%;
+  font-weight: bold;
+
+}
+
+.single {
+  width: 100%;
+}
+
+.myrow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    height: 115%;
+  }
+  .margin {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .single {
+    width: 30%;
+  }
+
+  .myrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .small-card {
+    width: 100%;
+    height: 160px;
+    margin: 2%;
+    margin-bottom: 4%;
+    border: 8px solid rgba(255, 255, 255, .5);
+    padding: 10%;
+    overflow: hidden;
+  }
+
+  .center {
+    height: 280px;
+    z-index: 3;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 30%;
+    padding: 1%;
+  }
+
+  .header img {
+    width: 70%;
+  }
+
+  .btns {
+    width: 90%;
+    margin-top: 10%;
+  }
+  .btns .btn {
+    font-size: 12px;
+  }
+
+  #c1 {
+    position: absolute;
+    top: 2%;
+    left: 15%;
+    height: 600px;
+  }
+
+  #c2 {
+    position: absolute;
+    right: 1%;
+    top: 66%;
+  }
+
+  #c3 {
+    position: absolute;
+    top: 89%;
+    right: 1%;
+  }
+  .mcard {
+    margin-top: 10%;
+    width: 90%;
+    height: 300px;
+  }
 }
